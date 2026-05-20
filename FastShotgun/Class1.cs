@@ -27,11 +27,13 @@ public class Plugin : BaseUnityPlugin
         isEnabled=new BoolField(
             config.rootPanel,
             "Enabled", 
-            "field.isenabled", true, true
+            "field.isenabled", FastShotgunEnabled.Value, 
+            true
         );
         isEnabled.onValueChange += (value) => {
             FastShotgunEnabled.Value=value.value;
         };
+        isEnabled.value=FastShotgunEnabled.Value;
         Logger.LogInfo("Mod loaded!");
         var harmony = new Harmony("me.fastshotgun");
         harmony.PatchAll();
