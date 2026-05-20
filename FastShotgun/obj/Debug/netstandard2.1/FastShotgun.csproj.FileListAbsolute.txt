@@ -16,3 +16,4 @@
 /workspaces/SomeUltrakillMod/FastShotgun/obj/Debug/netstandard2.1/FastShot.0DF39B9E.Up2Date
 /workspaces/SomeUltrakillMod/FastShotgun/obj/Debug/netstandard2.1/FastShotgun.dll
 /workspaces/SomeUltrakillMod/FastShotgun/obj/Debug/netstandard2.1/FastShotgun.pdb
+/workspaces/SomeUltrakillMod/FastShotgun/bin/Debug/netstandard2.1/PluginConfigurator.dll

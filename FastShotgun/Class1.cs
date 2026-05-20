@@ -20,6 +20,10 @@ public class Plugin : BaseUnityPlugin
             "Enabled", true, 
             "Whether the mod is enabled or not."
         );
+        config=PluginConfigurator.Create(
+            "Fast Shotgun", 
+            "me.fastshotgun"
+        );
         isEnabled=new BoolField(
             config.rootPanel,
             "Enabled", 
@@ -47,6 +51,7 @@ class Shotgun_Patch
 {
     static void Prefix(Shotgun __instance)
     {
+        if (!Plugin.FastShotgunEnabled.Value) return;
         Traverse.Create(__instance)
             .Field("gunReady")
             .SetValue(true);
